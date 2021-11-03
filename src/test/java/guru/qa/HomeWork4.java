@@ -51,11 +51,15 @@ public class HomeWork4 {
         // Проверяем переход на страницу SoftAssertions
         $(byText("SoftAssertions")).shouldBe(Condition.visible,Duration.ofSeconds(10));
 
-        // Проверяем наличие примера кода для JUnit5
+        // Проверяем наличие примера кода для JUnit5 (тест отрабатывает за 12s)
         $("ol li").parent().shouldHave(Condition.text("com.codeborne.selenide.junit5.SoftAssertsExtension"));
 
+        // Судя по тому, что тест не поломался разницы между $("ol li") и  $("ol").$("li") нет. (тест отрабатывает за теже 12s)
+        // Больше похоже на упрощение кода
+        $("ol").$("li").parent().shouldHave(Condition.text("com.codeborne.selenide.junit5.SoftAssertsExtension"));
+
         // Задержна для проверки
-        sleep(5000);
+        //sleep(5000);
     }
 
 
