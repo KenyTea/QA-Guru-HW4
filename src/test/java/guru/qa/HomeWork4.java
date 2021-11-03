@@ -62,8 +62,4 @@ public class HomeWork4 {
         //sleep(5000);
     }
 
-
-
-
-
 }
