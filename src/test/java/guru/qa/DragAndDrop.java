@@ -35,7 +35,8 @@ public class DragAndDrop {
             }
             else {
                 $(squareB).dragAndDropTo(squareA);
-                $(squareA).parent().shouldHave(Condition.text("B"));
+                $(squareA).parent().shouldHave(Condition.text("A"));
+                System.out.println("\nSuccessful movement of " + squareB + "\n");
             }
 
 
